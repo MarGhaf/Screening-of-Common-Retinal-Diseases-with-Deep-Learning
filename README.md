@@ -38,8 +38,9 @@ Methodology in a data science project refers to the structured approach or proce
 ## Obtain
 The data that will be used for the model has been graciously prepared by University of California San Diego, Guangzhou Women and Children's Medical Center This dataset contains thousands of validated OCT and Chest X-Ray images described and analyzed in "Identifying Medical Diagnoses and Treatable Diseases by Image-Based Deep Learning". The images are split into a training set and a testing set of independent patients. Images are labeled as (disease)-(randomized patient ID)-(image number by this patient) and split into 4 directories: **CNV, DME, DRUSEN, and NORMAL**. I will use the processed CT images hosted by Casper for the neural networks. In order to access these data I download it directly to the local hardware, and create a path to the images.
 
+
 ## Scrub and Explore
-The data itself was biased with 98.9% of the images being of normal and , and so the normal dataset was shortened to the 8000 random selection of each group 99. 
+The data itself was biased with 98.9% of the images being of normal and , and so the normal dataset was shortened to the 8000 random selection of each group. 
 
 
 ## Model
