@@ -43,4 +43,6 @@ The data that will be used for the model has been graciously prepared by Univers
 The data itself was biased with 98.9% of the images being of normal and , and so the normal dataset was shortened to the 8000 random selection of each group. 
 
 
+
+
 ## Model
