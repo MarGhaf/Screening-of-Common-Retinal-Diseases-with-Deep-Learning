@@ -48,3 +48,25 @@ The data itself was biased with 98.9% of the images being of normal and , and so
 
 
 ## Model
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ## Repository Structure
+```
+
+├── Code : final_student.ipynb includ modeling
+├── Data : Data used for modeling, includes train and test image files
+├── Images : Images used in Phase 4 Project Presentation.pdf and README
+├── Phase 4 Project Presentation.pdf : Presentation for stakeholders
+└── README.md : Project information and repository structure
