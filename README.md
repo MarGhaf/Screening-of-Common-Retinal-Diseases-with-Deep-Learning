@@ -48,9 +48,15 @@ The data itself was biased with 98.9% of the images being of normal and , and so
 
 
 ## Model
+After modeling with basline CNN the model showed high biased and it needed to be regulrized the most promising model was the model that includes 4 blocks of convolutional layers, each followed by a max pooling layer to downsample the feature maps. The model then flattens the output of the last max pooling layer and passes it through two fully connected layers, each consisting of 512 neurons, with ReLU activation functions and a 0.3 dropout rate to reduce overfitting. Finally, the model outputs a probability distribution over the 4 classes using a dense layer with a sigmoid activation function. The the Netron visualization of the CNN model was illustrated in below image. 
 
 
 
+
+![image](https://user-images.githubusercontent.com/101681195/224182839-ceb3f0b6-4b3b-4407-a26b-7b3561b70885.png)
+
+
+## Performance
 
 
 
