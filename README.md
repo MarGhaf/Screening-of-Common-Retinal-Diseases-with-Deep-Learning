@@ -59,6 +59,8 @@ Through the confusion matrix results on the test dataset, it was reveled that th
 ## Feature Visulization
 Visualizing feature maps in a CNN can help us understand how the network is processing the input image at different layers. Feature maps are the output of a convolutional layer and they represent the activation of certain filters in response to the input image. By visualizing the feature maps, we can see what the network is focusing on in the image, and how the feature representation changes as we move deeper into the network. By Comparing the features maps in 4 groups we can gain insights into what the model has learned. For example, we can see the model is detecting edges, shapes and how it combines these features to make predictions.
 
+![image](https://user-images.githubusercontent.com/101681195/224196575-eb54d472-860e-4363-b4c7-8036d89aa4ae.png)
+
 
 # Conclusion
 
