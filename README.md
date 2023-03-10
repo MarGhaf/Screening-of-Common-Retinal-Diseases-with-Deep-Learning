@@ -59,12 +59,8 @@ After modeling with basline CNN the model showed high biased and it needed to be
 ## Performance
 Through the confusion matrix results on the test dataset, it was reveled that the model showed a low false-negative rate in the **CNV and DME**. It menas the model is **identifying most of the positive cases** correctly, which is particularly important in situations where missing a positive case can have serious consequences. In This situation the metric evaluation of **sensitivity or recall** is more important than specificity or precision. This model could fulfill the objective of this prosoal which was recall > 0.9. 
 
+![image](https://user-images.githubusercontent.com/101681195/224195011-98ffba25-dd68-4c03-9aae-fb7a2ace687f.png)
 
-
-
-
-
-![image](https://user-images.githubusercontent.com/101681195/224190014-29931a6a-625f-4b33-bee2-d687f1acef24.png)
 
 
 
