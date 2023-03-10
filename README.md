@@ -63,7 +63,11 @@ Visualizing feature maps in a CNN can help us understand how the network is proc
 
 
 # Conclusion
+In conclusion, this project aimed to develop a deep learning-based diagnostic tool using a convolutional neural network to accurately classify optical coherence tomography (OCT) images of retinal diseases. The use of deep learning algorithms in medical image classification has evolved rapidly over the past decade, and this project demonstrates that the application of such algorithms can significantly benefit patients by enabling early detection, personalized treatment, improved monitoring, and reduced healthcare costs.
 
+The developed CNN model was trained and tested on a dataset of OCT images to distinguish between four potential classes (CNV, DME, DRUSEN, and NORMAL) with a high accuracy rate of 0.89. However, the main focus of the project was to achieve a high recall rate for the more serious conditions, CNV and DME, with a goal of above 0.9. The model achieved a recall of 0.94 and 0.96 for CNV and DME, respectively, indicating a low false-negative rate and a high level of sensitivity in identifying positive cases.
+
+Therefore, the results of this project suggest that implementing deep learning-based diagnostic tools for screening and diagnosis of retinal diseases can significantly improve patient outcomes and reduce healthcare costs by enabling early detection and personalized treatment. However, further research is needed to address challenges in accuracy and interpretability of such algorithms and to ensure their ethical use in clinical settings.
 
  ## Repository Structure
 ```
