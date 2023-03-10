@@ -21,8 +21,6 @@ This proposal has two **primary objectives**:
 
 
 
-
-
 #  Evaluation Metrics
 The model will be a **multi-classification**, meaning that there are four potential classes (CNV, DME, DRUSEN, and NORMAL) that can be placed. While all three conditions can affect the health of the retina, CNV and DME are generally considered more serious and require more aggressive treatment, as they can cause rapid and severe vision loss if left untreated. If the model incorrectly predicts normal or drusen states, it means some patients at higher risk of vision loss would be untreated. Therefore, for the purposes of this work, a **low false-negative** rate has more value than a low false-positive rate. When a low false-negative rate has more value than a low false-positive rate, the metric evaluation of **sensitivity or recall** is more important than specificity or precision. Sensitivity or recall measures the proportion of actual positives that are correctly identified as such by a classification model, while specificity or precision measures the proportion of actual negatives that are correctly identified as such. A low false-negative rate means that the model is **identifying most of the positive cases** correctly, which is particularly important in situations where missing a positive case can have serious consequences. In contrast, a low false-positive rate is more important when the cost of false positives is high, such as in medical testing where false positives can lead to unnecessary treatments and anxiety for patients. The Recall is defined as:
 
@@ -45,27 +43,24 @@ The data itself was biased with 98.9% of the images being of normal and , and so
 ![image](https://user-images.githubusercontent.com/101681195/222004361-80531e34-8710-45b7-87cd-c5bcb78ff68f.png)
 
 
-
-
 ## Model
 After modeling with basline CNN the model showed high biased and it needed to be regulrized. The most promising model was the model that includes 4 blocks of convolutional layers, each followed by a max pooling layer to downsample the feature maps. The model then flattens the output of the last max pooling layer and passes it through two fully connected layers, each consisting of 512 neurons, with ReLU activation functions and a 0.3 dropout rate to reduce overfitting. Finally, the model outputs a probability distribution over the 4 classes using a dense layer with a sigmoid activation function. The the Netron visualization of the CNN model was illustrated in below image. 
-
-
 
 
 ![image](https://user-images.githubusercontent.com/101681195/224182839-ceb3f0b6-4b3b-4407-a26b-7b3561b70885.png)
 
 
 ## Performance
-Through the confusion matrix results on the test dataset, it was reveled that the model showed a low false-negative rate in the **CNV and DME**. It menas the model is **identifying most of the positive cases** correctly, which is particularly important in situations where missing a positive case can have serious consequences. In This situation the metric evaluation of **sensitivity or recall** is more important than specificity or precision. This model could fulfill the objective of this prosoal which was recall > 0.9. 
+Through the confusion matrix results on the test dataset, it was reveled that the model showed a low false-negative rate in the **CNV and DME**. It menas the model is **identifying most of the positive cases** correctly, which is particularly important in situations where missing a positive case can have serious consequences. In This situation the metric evaluation of **sensitivity or recall** is more important than specificity or precision. This model could fulfill the objective of this prosoal which was **recall > 0.9**. 
 
 ![image](https://user-images.githubusercontent.com/101681195/224195011-98ffba25-dd68-4c03-9aae-fb7a2ace687f.png)
 
 
+## Feature Visulization
+Visualizing feature maps in a CNN can help us understand how the network is processing the input image at different layers. Feature maps are the output of a convolutional layer and they represent the activation of certain filters in response to the input image. By visualizing the feature maps, we can see what the network is focusing on in the image, and how the feature representation changes as we move deeper into the network. By Comparing the features maps in 4 groups we can gain insights into what the model has learned. For example, we can see the model is detecting edges, shapes and how it combines these features to make predictions.
 
 
-
-
+# Conclusion
 
 
  ## Repository Structure
