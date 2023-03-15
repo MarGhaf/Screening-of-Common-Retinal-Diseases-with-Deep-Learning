@@ -70,7 +70,13 @@ The developed CNN model was trained and tested on a dataset of OCT images to dis
 Therefore, the results of this project suggest that implementing deep learning-based diagnostic tools for screening and diagnosis of retinal diseases can significantly improve patient outcomes and reduce healthcare costs by enabling early detection and personalized treatment. However, further research is needed to address challenges in accuracy and interpretability of such algorithms and to ensure their ethical use in clinical settings.
 
 # Future Work
-Exploration of different deep learning architectures and pretrained models: Although the CNN model used in this project achieved high accuracy and recall rates, other deep learning architectures may be more suitable for this task. The pre-trained neural network has already learned to recognize and extract meaningful features from a large dataset, often millions of images, which can be transferred and reused in a new neural network designed for a related task.
+- Exploration of different deep learning architectures and pretrained models: Although the CNN model used in this project achieved high accuracy and recall rates, other deep learning architectures may be more suitable for this task. The pre-trained neural network has already learned to recognize and extract meaningful features from a large dataset, often millions of images, which can be transferred and reused in a new neural network designed for a related task.
+
+- Incorporating other imaging modalities: OCT is just one type of imaging modality used in ophthalmology. Future work could explore the use of deep learning-based models to analyze other imaging modalities such as fundus photography or fluorescein angiography .
+
+- Clinical validation: While the developed CNN model achieved high accuracy and recall rates on the test dataset, it is important to validate the model in a clinical setting. Future work could involve a prospective study to evaluate the performance of the model in a clinical setting and compare it to the performance of human experts.
+
+
 
 
 
