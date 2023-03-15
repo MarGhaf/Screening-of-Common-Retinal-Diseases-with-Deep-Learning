@@ -38,7 +38,7 @@ The data that will be used for the model has been graciously prepared by the Uni
 
 
 ## Scrub and Explore
-The data itself was biased with 98.9% of the images being of normal and , and so the normal dataset was shortened to the 8000 random selection of each group. 
+The data itself was biased with 47% of the images being of normal and , and so the normal dataset was shortened to the 8000 random selection of each group. 
 
 ![image](https://user-images.githubusercontent.com/101681195/222004361-80531e34-8710-45b7-87cd-c5bcb78ff68f.png)
 
