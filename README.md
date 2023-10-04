@@ -31,32 +31,32 @@ The model will achieve:
 $$ \text{Recall} => 0.9 $$ 
 
 # Methodology
-Methodology in a data science project refers to the structured approach or process used to carry out the project from start to finish.The general research strategy in this project is to use the OSEMiN pipline on the availabe dataset to structure their workflow and make it more organized and efficient The OSEMiN pipeline consists of the following five steps: **Obtain, Scrub, Explore, Model, and iNterpret**.
+Methodology in a data science project refers to the structured approach or process used to carry out the project from start to finish. The general research strategy in this project is to use the OSEMiN pipeline on the available dataset to structure their workflow and make it more organized and efficient The OSEMiN pipeline consists of the following five steps: **Obtain, Scrub, Explore, Model, and iNterpret**.
 
 ## Obtain
-The data that will be used for the model has been graciously prepared by the University of California San Diego, Guangzhou Women and Children's Medical Center This dataset contains thousands of validated OCT and Chest X-Ray images described and analyzed in "Identifying Medical Diagnoses and Treatable Diseases by Image-Based Deep Learning". The images are split into a training set and a testing set of independent patients. Images are labeled as (disease)-(randomized patient ID)-(image number by this patient) and split into 4 directories: **CNV, DME, DRUSEN, and NORMAL**. I will use the processed CT images hosted by Casper for the neural networks. In order to access these data I download it directly to the local hardware and create a path to the images.
+The data that will be used for the model has been graciously prepared by the University of California San Diego, Guangzhou Women and Children's Medical Center This dataset contains thousands of validated OCT and Chest X-ray images described and analyzed in "Identifying Medical Diagnoses and Treatable Diseases by Image-Based Deep Learning". The images are split into a training set and a testing set of independent patients. Images are labeled as (disease)-(randomized patient ID)-(image number by this patient) and split into 4 directories: **CNV, DME, DRUSEN, and NORMAL**. I will use the processed CT images hosted by Casper for the neural networks. In order to access these data I download it directly to the local hardware and create a path to the images.
 
 
 ## Scrub and Explore
-The data itself was biased with 47% of the images being of normal and , and so the normal dataset was shortened to the 8000 random selection of each group. 
+The data itself was biased with 47% of the images being normal, and so the normal dataset was shortened to the 8000 random selections of each group. 
 
 ![image](https://user-images.githubusercontent.com/101681195/222004361-80531e34-8710-45b7-87cd-c5bcb78ff68f.png)
 
 
 ## Model
-After modeling with basline CNN the model showed high biased and it needed to be regulrized. The most promising model was the model that includes 4 blocks of convolutional layers, each followed by a max pooling layer to downsample the feature maps. The model then flattens the output of the last max pooling layer and passes it through two fully connected layers, each consisting of 512 neurons, with ReLU activation functions and a 0.3 dropout rate to reduce overfitting. Finally, the model outputs a probability distribution over the 4 classes using a dense layer with a sigmoid activation function. The the Netron visualization of the CNN model was illustrated in below image. 
+After modeling with baseline CNN the model showed high bias and it needed to be regularized. The most promising model was the model that includes 4 blocks of convolutional layers, each followed by a max pooling layer to downsample the feature maps. The model then flattens the output of the last max pooling layer and passes it through two fully connected layers, each consisting of 512 neurons, with ReLU activation functions and a 0.3 dropout rate to reduce overfitting. Finally, the model outputs a probability distribution over the 4 classes using a dense layer with a sigmoid activation function. The Netron visualization of the CNN model is illustrated in the below image. 
 
 
 ![image](https://user-images.githubusercontent.com/101681195/224182839-ceb3f0b6-4b3b-4407-a26b-7b3561b70885.png)
 
 
 ## Performance
-Through the confusion matrix results on the test dataset, it was reveled that the model showed a low false-negative rate in the **CNV and DME**. It menas the model is **identifying most of the positive cases** correctly, which is particularly important in situations where missing a positive case can have serious consequences. In This situation the metric evaluation of **sensitivity or recall** is more important than specificity or precision. This model could fulfill the objective of this prosoal which was **recall > 0.9**. 
+Through the confusion matrix results on the test dataset, it was revealed that the model showed a low false-negative rate in the **CNV and DME**. It means the model is **identifying most of the positive cases** correctly, which is particularly important in situations where missing a positive case can have serious consequences. In This situation the metric evaluation of **sensitivity or recall** is more important than specificity or precision. This model could fulfill the objective of this proposal which was **recall > 0.9**. 
 
 ![image](https://user-images.githubusercontent.com/101681195/224195011-98ffba25-dd68-4c03-9aae-fb7a2ace687f.png)
 
 
-## Feature Visulization
+## Feature Visualization
 Visualizing feature maps in a CNN can help us understand how the network is processing the input image at different layers. Feature maps are the output of a convolutional layer and they represent the activation of certain filters in response to the input image. By visualizing the feature maps, we can see what the network is focusing on in the image, and how the feature representation changes as we move deeper into the network. By Comparing the features maps in 4 groups we can gain insights into what the model has learned. For example, we can see the model is detecting edges, shapes and how it combines these features to make predictions.
 
 ![image](https://user-images.githubusercontent.com/101681195/224390795-749ed7b3-df2f-41f9-a15c-e724371cce0c.png)
@@ -67,12 +67,12 @@ In conclusion, this project aimed to develop a deep learning-based diagnostic to
 
 The developed CNN model was trained and tested on a dataset of OCT images to distinguish between four potential classes (CNV, DME, DRUSEN, and NORMAL) with a high accuracy rate of 0.89. However, the main focus of the project was to achieve a high recall rate for the more serious conditions, CNV and DME, with a goal of above 0.9. The model achieved a recall of 0.94 and 0.96 for CNV and DME, respectively, indicating a low false-negative rate and a high level of sensitivity in identifying positive cases.
 
-Therefore, the results of this project suggest that implementing deep learning-based diagnostic tools for screening and diagnosis of retinal diseases can significantly improve patient outcomes and reduce healthcare costs by enabling early detection and personalized treatment. However, further research is needed to address challenges in accuracy and interpretability of such algorithms and to ensure their ethical use in clinical settings.
+Therefore, the results of this project suggest that implementing deep learning-based diagnostic tools for screening and diagnosis of retinal diseases can significantly improve patient outcomes and reduce healthcare costs by enabling early detection and personalized treatment. However, further research is needed to address challenges in the accuracy and interpretability of such algorithms and to ensure their ethical use in clinical settings.
 
 # Future Work
-- Exploration of different deep learning architectures and pretrained models: Although the CNN model used in this project achieved high accuracy and recall rates, other deep learning architectures may be more suitable for this task. The pre-trained neural network has already learned to recognize and extract meaningful features from a large dataset, often millions of images, which can be transferred and reused in a new neural network designed for a related task.
+- Exploration of different deep learning architectures and pre-trained models: Although the CNN model used in this project achieved high accuracy and recall rates, other deep learning architectures may be more suitable for this task. The pre-trained neural network has already learned to recognize and extract meaningful features from a large dataset, often millions of images, which can be transferred and reused in a new neural network designed for a related task.
 
-- Incorporating other imaging modalities: OCT is just one type of imaging modality used in ophthalmology. Future work could explore the use of deep learning-based models to analyze other imaging modalities such as fundus photography or fluorescein angiography .
+- Incorporating other imaging modalities: OCT is just one type of imaging modality used in ophthalmology. Future work could explore the use of deep learning-based models to analyze other imaging modalities such as fundus photography or fluorescein angiography.
 
 - Clinical validation: While the developed CNN model achieved high accuracy and recall rates on the test dataset, it is important to validate the model in a clinical setting. Future work could involve a prospective study to evaluate the performance of the model in a clinical setting and compare it to the performance of human experts.
 
